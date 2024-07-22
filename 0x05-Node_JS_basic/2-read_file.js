@@ -8,13 +8,13 @@ function countStudents(path) {
       throw new Error('Cannot load the database');
     }
 
-    const students = lines.slice(1).filter(line => line.trim() !== '');
+    const students = lines.slice(1).filter((line) => line.trim() !== '');
     const studentsCount = students.length;
     console.log(`Number of students: ${studentsCount}`);
 
     const fields = {};
     for (const student of students) {
-      const [fname, lname, age, field] = student.split(',');
+      const [fname, , , field] = student.split(',');
       if (!fields[field]) {
         fields[field] = [];
       }
