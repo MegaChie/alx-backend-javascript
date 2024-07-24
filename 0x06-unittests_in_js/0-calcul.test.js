@@ -1,24 +1,24 @@
-const { expect } = require('chai');
+const assert = require('assert');
 const sumNumber = require('./0-calcul');
 
 describe('numberAddition', () => {
-  it('should round numbers and add (1, 3)', () => {
+  it('round number and add (1, 3)', () => {
     const res = sumNumber(1, 3);
-    expect(res).to.equal(4);
+    assert.strictEqual(res, 4);
   });
-  
-  it('should round numbers and add (1, 3.7)', () => {
+
+  it('round number and add (1, 3.7)', () => {
     const res = sumNumber(1, 3.7);
-    expect(res).to.equal(5);
+    assert.strictEqual(res, 5);
   });
 
-  it('should round numbers and add (1.2, 3.7)', () => {
+  it('round number and add (1.2, 3.7)', () => {
     const res = sumNumber(1.2, 3.7);
-    expect(res).to.equal(5);
+    assert.strictEqual(res, 5);
   });
 
-  it('should round numbers and add (1.5, 3.8)', () => {
+  it('round number and add (1.5, 3.8)', () => {
     const res = sumNumber(1.5, 3.8);
-    expect(res).to.equal(6);
+    assert.strictEqual(res, 6);
   });
 });
